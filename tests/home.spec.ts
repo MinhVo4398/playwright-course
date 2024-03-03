@@ -41,7 +41,17 @@ test.describe('Home', () => {
 
         //verify heading text is visible
         await expect(homeText).toBeEnabled();
-       
     })
+
+    test('Verify search icon is visible using xpath selector', async ({ page }) => {
+        // open url
+        await page.goto('https://practice.sdetunicorns.com');
+    
+        // find the search icon
+        const searchIcon = page.locator("//div[@class='zak-header-actions zak-header-actions--desktop']//a[@class='zak-header-search__toggle']//*[name()='svg']")
+    
+        // verify search icon is visible
+        await expect(searchIcon).toBeVisible();
+      })
     
 })
