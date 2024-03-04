@@ -17,6 +17,9 @@ test.describe('Contact', () => {
         // Click submit
         await page.locator('button[type=submit]').click();
 
+        // To check that there is one assertion fail
+        expect(test.info().errors.length).toBeLessThan(1);
+
         // Verify success message
         const successAlert =  page.locator("div[role='alert']")
         await expect(successAlert).toHaveText('Thanks for contacting us! We will be in touch with you shortly');	
