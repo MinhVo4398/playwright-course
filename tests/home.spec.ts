@@ -53,5 +53,32 @@ test.describe('Home', () => {
         // verify search icon is visible
         await expect(searchIcon).toBeVisible();
       })
+
+      test('Verify text for all nav links', async ({ page }) => {
+        const expectedLinks = [
+            'Home',
+            'About',
+            'Shop',
+            'Blog',
+            'Contact',
+            'My account',
+        ]
+
+        // open url
+        await page.goto('https://practice.sdetunicorns.com');
+    
+        // find the nav links
+        const navLinks = await page.locator('#zak-primary-menu li[id*=menu]')
+
+        //print out all the links
+        for (const el of await navLinks.elementHandles()) {
+            console.log(await el.textContent());
+            // manipulating
+        }
+    
+        // verify nav links text
+       // expect(await navLinks.allTextContents()).toEqual(expectedLinks);
+       expect(await navLinks.allTextContents()).toEqual(expectedLinks);
+      })
     
 })
