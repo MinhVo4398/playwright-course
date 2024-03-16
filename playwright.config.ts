@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  // Maximum time one test can run for
   timeout: 30  * 1000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -13,6 +14,8 @@ export default defineConfig({
     headless:false,
   },
   expect: {
+    // Maximum time expect() should wait for the condition to be match
+    //Ex: in await expect(locator).toHaveText();
     timeout: 5000
   },
 

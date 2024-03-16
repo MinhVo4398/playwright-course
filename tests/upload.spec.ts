@@ -19,12 +19,12 @@ test.describe("Upload file", () => {
     //await page.waitForTimeout(5000);
 
     // wait for condition
-    await page.locator("#wfu_messageblock_header_1_label_1").waitFor({state:'visible',timeout: 10000});
+    //await page.locator("#wfu_messageblock_header_1_label_1").waitFor({state:'visible',timeout: 10000});
 
     //Assertion
     await expect(
       page.locator("#wfu_messageblock_header_1_label_1")
-    ).toContainText("uploaded successfully");
+    ).toContainText("uploaded successfully", {timeout: 20000});
   });
 
   test("should upload a test file on a hidden input field ", async ({
