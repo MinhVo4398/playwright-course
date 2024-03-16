@@ -17,9 +17,12 @@ test.describe("Home", () => {
   });
 
   test("Click get started button using CSS Selector", async ({ page }) => {
+    homePage = new HomePage(page);
+
     await page.goto("https://practice.sdetunicorns.com");
+
     // click the button
-    await page.locator("#get-started").click();
+    await homePage.getStartedBtn().click();
 
     //verify url has #get-started
     await expect(page).toHaveURL(/.*#get-started/);
@@ -28,10 +31,12 @@ test.describe("Home", () => {
   test("Verify heading text is visible using text selector", async ({
     page,
   }) => {
+    homePage = new HomePage(page);
+
     await page.goto("https://practice.sdetunicorns.com");
 
     // find the text locator
-    const headingText = page.locator("text=Think different. Make different.");
+   const headingText = await homePage.headingText;
 
     //verify heading text is visible
     await expect(headingText).not.toBeHidden();
@@ -41,11 +46,11 @@ test.describe("Home", () => {
   test("Verify home link is enabled using text and css selector", async ({
     page,
   }) => {
+    homePage = new HomePage(page);
     await page.goto("https://practice.sdetunicorns.com");
 
     // find the home text
-    // const homeText = await page.locator('#zak-primary-menu >> text=Home')
-    const homeText = page.locator('#zak-primary-menu:has-text("Home")');
+   const homeText = await homePage.homeLink;
 
     //verify heading text is visible
     await expect(homeText).toBeEnabled();
@@ -58,15 +63,14 @@ test.describe("Home", () => {
     await page.goto("https://practice.sdetunicorns.com");
 
     // find the search icon
-    const searchIcon = page.locator(
-      "//div[@class='zak-header-actions zak-header-actions--desktop']//a[@class='zak-header-search__toggle']//*[name()='svg']"
-    );
+    const searchIcon = await homePage.searchIcon;
 
     // verify search icon is visible
     await expect(searchIcon).toBeVisible();
   });
 
   test("Verify text for all nav links", async ({ page }) => {
+    homePage = new HomePage(page);
     const expectedLinks = [
       "Home",
       "About",
@@ -80,7 +84,7 @@ test.describe("Home", () => {
     await page.goto("https://practice.sdetunicorns.com");
 
     // find the nav links
-    const navLinks = await page.locator("#zak-primary-menu li[id*=menu]");
+    const navLinks = await homePage.navLinks();
 
     //print out all the links
     for (const el of await navLinks.elementHandles()) {
