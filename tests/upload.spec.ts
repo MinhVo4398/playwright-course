@@ -7,13 +7,16 @@ test.describe("Upload file", () => {
     await page.goto("https://practice.sdetunicorns.com/cart/");
 
     //provide test file path
-    const filePath = path.join(__dirname, "../data/logo.png");
+    const filePath = path.join(__dirname, "../data/Java.pdf");
 
     //Upload test file (the input must actual input[type=file])
     await page.setInputFiles("input#upfile_1", filePath);
 
     //Click submit button
     await page.locator("#upload_1").click();
+
+    // hardcoded sleep - WRONG WAY
+    await page.waitForTimeout(5000);
 
     //Assertion
     await expect(
