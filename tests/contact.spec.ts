@@ -1,28 +1,20 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from "@playwright/test";
+import ContactPage from "../pages/contact.page";
 
-test.describe('Contact', () => {
-    test('Filling contact form and verify success message', async ({ page }) => {
-        // Open contact page
-        await page.goto('https://practice.sdetunicorns.com/contact/');
+test.describe("Contact", () => {
+  let contactPage: ContactPage;
+  test("Filling contact form and verify success message", async ({ page }) => {
+    contactPage = new ContactPage(page);
+    // Open contact page
+    await contactPage.navigate();
 
-        // fill out the input fields
-        await page.locator('.contact-name input').fill('Test Name');
-        await page.locator('.contact-email input').fill('test@mail.com');
-        await page.locator('.contact-phone input').fill('1234567864');
-        await page.locator('.contact-message textarea').fill('This is a text message');
+    // fill out the input fields and submit
+    await contactPage.submitForm("test name", "test@mail.ca", "123789123", "Hello, this is taking advantage of POM");
 
-        // Add a soft assertion
-        await expect.soft(page.locator('.contact-message textarea')).toHaveText('Fail test message');
 
-        // Click submit
-        await page.locator('button[type=submit]').click();
+    // Verify success message
 
-        // To check that there is one assertion fail
-        expect(test.info().errors.length).toBeLessThan(1);
-
-        // Verify success message
-        const successAlert =  page.locator("div[role='alert']")
-        await expect(successAlert).toHaveText('Thanks for contacting us! We will be in touch with you shortly');	
-    })
-    
-})
+    await expect(contactPage.successTxt).toHaveText("Thanks for contacting us! We will be in touch with you shortly",);
+   
+  });
+});
