@@ -1,30 +1,25 @@
 import { expect, test } from "@playwright/test";
+import CartPage from "../pages/cart.page";
 const path = require("path");
 
-test.describe("Upload file", () => {
+
+test.describe("Upload file", () => { 
+  let cartPage: CartPage;
+
   test("should upload a test file ", async ({ page }) => {
+    cartPage = new CartPage(page);
     // Open Url
     await page.goto("https://practice.sdetunicorns.com/cart/");
 
     //provide test file path
     const filePath = path.join(__dirname, "../data/Java.pdf");
 
-    //Upload test file (the input must actual input[type=file])
-    await page.setInputFiles("input#upfile_1", filePath);
-
-    //Click submit button
-    await page.locator("#upload_1").click();
-
-    // hardcoded sleep - WRONG WAY
-    //await page.waitForTimeout(5000);
-
-    // wait for condition
-    //await page.locator("#wfu_messageblock_header_1_label_1").waitFor({state:'visible',timeout: 10000});
+    //Upload test file
+    cartPage.uploadComponent().uploadFile(filePath);
 
     //Assertion
-    await expect(
-      page.locator("#wfu_messageblock_header_1_label_1")
-    ).toContainText("uploaded successfully", {timeout: 20000});
+    await expect(cartPage.uploadComponent().successTxt).toContainText("uploaded successfully", {timeout: 20000});
+   
   });
 
   test("should upload a test file on a hidden input field ", async ({
