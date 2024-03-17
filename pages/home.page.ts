@@ -17,6 +17,15 @@ class HomePage {
     );
     this.navLinks =  page.locator("#zak-primary-menu li[id*=menu]");
   }
+
+  async navigate() {
+    await this.page.goto("https://practice.sdetunicorns.com/");
+  }
+
+   getNavLinksText() {
+    return this.navLinks.allTextContents();
+  }
+
 }
 
 export default HomePage;

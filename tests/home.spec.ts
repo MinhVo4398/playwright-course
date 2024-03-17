@@ -6,7 +6,8 @@ test.describe("Home", () => {
   test("Open HomePage and verify title", async ({ page }) => {
     homePage = new HomePage(page);
 
-    await page.goto("https://practice.sdetunicorns.com/");
+    //Open URL
+    await homePage.navigate();
     //verify title
     await expect(page).toHaveTitle("Practice E-Commerce Site – SDET Unicorns");
   });
@@ -19,11 +20,11 @@ test.describe("Home", () => {
   test("Click get started button using CSS Selector", async ({ page }) => {
     homePage = new HomePage(page);
 
-    await page.goto("https://practice.sdetunicorns.com");
+    //Open URL
+    await homePage.navigate();
 
     // click the button
     await homePage.getStartedBtn.click();
-  
 
     //verify url has #get-started
     await expect(page).toHaveURL(/.*#get-started/);
@@ -34,10 +35,10 @@ test.describe("Home", () => {
   }) => {
     homePage = new HomePage(page);
 
-    await page.goto("https://practice.sdetunicorns.com");
-
+    //Open URL
+    await homePage.navigate();
     // find the text locator
-   const headingText = await homePage.headingText;
+    const headingText = await homePage.headingText;
 
     //verify heading text is visible
     await expect(headingText).not.toBeHidden();
@@ -48,10 +49,11 @@ test.describe("Home", () => {
     page,
   }) => {
     homePage = new HomePage(page);
-    await page.goto("https://practice.sdetunicorns.com");
+    //Open URL
+    await homePage.navigate();
 
     // find the home text
-   const homeText = await homePage.homeLink;
+    const homeText = await homePage.homeLink;
 
     //verify heading text is visible
     await expect(homeText).toBeEnabled();
@@ -60,8 +62,8 @@ test.describe("Home", () => {
   test("Verify search icon is visible using xpath selector", async ({
     page,
   }) => {
-    // open url
-    await page.goto("https://practice.sdetunicorns.com");
+    //Open URL
+    await homePage.navigate();
 
     // find the search icon
     const searchIcon = await homePage.searchIcon;
@@ -81,20 +83,10 @@ test.describe("Home", () => {
       "My account",
     ];
 
-    // open url
-    await page.goto("https://practice.sdetunicorns.com");
-
-    // find the nav links
-    const navLinks = await homePage.navLinks();
-
-    //print out all the links
-    for (const el of await navLinks.elementHandles()) {
-      console.log(await el.textContent());
-      // manipulating
-    }
+    //Open URL
+    await homePage.navigate();
 
     // verify nav links text
-    // expect(await navLinks.allTextContents()).toEqual(expectedLinks);
-    expect(await navLinks.allTextContents()).toEqual(expectedLinks);
+    expect(await homePage.getNavLinksText()).toEqual(expectedLinks);
   });
 });
