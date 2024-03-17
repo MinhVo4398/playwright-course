@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import HomePage from "../pages/home.page";
 
 test.describe("Home", () => {
-  let homePage;
+  let homePage: HomePage;
   test("Open HomePage and verify title", async ({ page }) => {
     homePage = new HomePage(page);
 
@@ -22,7 +22,8 @@ test.describe("Home", () => {
     await page.goto("https://practice.sdetunicorns.com");
 
     // click the button
-    await homePage.getStartedBtn().click();
+    await homePage.getStartedBtn.click();
+  
 
     //verify url has #get-started
     await expect(page).toHaveURL(/.*#get-started/);
