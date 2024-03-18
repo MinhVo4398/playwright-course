@@ -12,6 +12,8 @@ export default defineConfig({
   use: {
     trace: 'on',
     headless:false,
+    // Base URL to use in actions like 'await page.goto('/)'
+    baseURL: 'https://practice.sdetunicorns.com/',
   },
   expect: {
     // Maximum time expect() should wait for the condition to be match

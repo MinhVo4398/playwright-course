@@ -7,7 +7,7 @@ test.describe('Blog', () => {
         blogPage = new BlogPage(page);
         // Open blog page
       await  blogPage.navigate();
-       	
+      
         //loop through the list and assert the char length > 10
         for (const el of await blogPage.recentPostList.elementHandles()) {
             console.log(await el.textContent());

@@ -9,7 +9,7 @@ class BlogPage {
         this.recentPostList = page.locator('#recent-posts-3 ul li');
     }
     async navigate() {
-        await this.page.goto('https://practice.sdetunicorns.com/blog/');
+        await this.page.goto('/blog');
     }
 }
 
