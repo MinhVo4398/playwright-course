@@ -29,6 +29,7 @@ class ContactPage {
          await this.emailInput.fill(email);
          await this.phoneInput.fill(phone);
          await this.messageTextArea.fill(message);
+         await this.page.waitForTimeout(5000);
          await this.submitBtn.click();
      }
  

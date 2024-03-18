@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import ContactPage from "../pages/contact.page";
+import { faker } from '@faker-js/faker';
 
 test.describe("Contact", () => {
   let contactPage: ContactPage;
@@ -11,7 +12,7 @@ test.describe("Contact", () => {
     await contactPage.navigate();
 
     // fill out the input fields and submit
-    await contactPage.submitForm("test name", "test@mail.ca", "123789123", "Hello, this is taking advantage of POM");
+    await contactPage.submitForm(faker.person.firstName(),  faker.internet.email(), faker.phone.number(), faker.lorem.paragraphs(2));
 
 
     // Verify success message
