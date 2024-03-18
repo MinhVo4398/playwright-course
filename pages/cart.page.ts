@@ -12,8 +12,6 @@ class CartPage {
     uploadComponent() {
         return new UploadComponent(this.page);
     }
-
-
 }
 
 export default CartPage;
