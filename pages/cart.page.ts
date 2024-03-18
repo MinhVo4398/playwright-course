@@ -1,4 +1,4 @@
-import { Page , Locator} from "@playwright/test";
+import { Page } from "@playwright/test";
 import UploadComponent from './component/upload.component';
 
 class CartPage {
@@ -7,8 +7,10 @@ class CartPage {
 
     constructor(page: Page) {
         this.page = page;
-     
-        
+    }
+
+    uploadComponent() {
+        return new UploadComponent(this.page);
     }
 
 

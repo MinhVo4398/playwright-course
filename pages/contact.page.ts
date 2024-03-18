@@ -33,7 +33,6 @@ class ContactPage {
          await this.submitBtn.click();
      }
  
- 
  }
 
 export default ContactPage;

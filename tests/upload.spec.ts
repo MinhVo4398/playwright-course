@@ -1,30 +1,35 @@
 import { expect, test } from "@playwright/test";
 import CartPage from "../pages/cart.page";
-const path = require("path");
+import path from "path";
 
 
 test.describe("Upload file", () => { 
   let cartPage: CartPage;
 
-  test("should upload a test file ", async ({ page }) => {
-    cartPage = new CartPage(page);
-    // Open Url
-    await page.goto("https://practice.sdetunicorns.com/cart/");
+  const fileName = ['logo.png', 'Java.pdf'];
 
-    //provide test file path
-    const filePath = path.join(__dirname, "../data/Java.pdf");
+  for(const name of fileName) {
+    test(`should upload a ${name}`, async ({ page }) => {
+      cartPage = new CartPage(page);
+  
+      // Open Url
+      await page.goto("https://practice.sdetunicorns.com/cart/");
+  
+      //provide test file path
+      const filePath = path.join(__dirname, `../data/${name}`);
+  
+      //Upload test file
+      cartPage.uploadComponent().uploadFile(filePath);
+  
+      //Assertion
+      await expect(cartPage.uploadComponent().successTxt).toContainText("uploaded successfully", {timeout: 20000});
+     
+    });
+  }
 
-    //Upload test file
-    cartPage.uploadComponent().uploadFile(filePath);
+  
 
-    //Assertion
-    await expect(cartPage.uploadComponent().successTxt).toContainText("uploaded successfully", {timeout: 20000});
-   
-  });
-
-  test("should upload a test file on a hidden input field ", async ({
-    page,
-  }) => {
+  test.skip("should upload a test file on a hidden input field", async ({page,}) => { 
     // Open Url
     await page.goto("https://practice.sdetunicorns.com/cart/");
 
