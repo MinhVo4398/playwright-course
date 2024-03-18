@@ -5,6 +5,8 @@ test.describe("Contact", () => {
   let contactPage: ContactPage;
   test("Filling contact form and verify success message", async ({ page }) => {
     contactPage = new ContactPage(page);
+    
+
     // Open contact page
     await contactPage.navigate();
 
