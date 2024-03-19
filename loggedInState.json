@@ -1,0 +1,175 @@
+{
+  "cookies": [
+    {
+      "name": "wordpress_sec_bcee46caf8128c4169fb42a56c1b36e7",
+      "value": "practiceuser1%7C1711059658%7CoQZNuYXnecicTqxG7KtZzuxuOi2GXXzrJa1tG2oiwV5%7C136a19be38063df1a43e70f25038c481950fc4023f2b8ac616b138a05f5ac674",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/wp-content/plugins",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "wordpress_sec_bcee46caf8128c4169fb42a56c1b36e7",
+      "value": "practiceuser1%7C1711059658%7CoQZNuYXnecicTqxG7KtZzuxuOi2GXXzrJa1tG2oiwV5%7C136a19be38063df1a43e70f25038c481950fc4023f2b8ac616b138a05f5ac674",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/wp-admin",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "wp_wpfileupload_bcee46caf8128c4169fb42a56c1b36e7",
+      "value": "NWScKsjS1hYNnPq59L7pAM7PkR23Kqrr",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/",
+      "expires": 1711059653.463431,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_migrations",
+      "value": "1418474375998%3D1",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_current_add",
+      "value": "fd%3D2024-03-19%2022%3A20%3A56%7C%7C%7Cep%3Dhttps%3A%2F%2Fpractice.sdetunicorns.com%2Fmy-account%2F%7C%7C%7Crf%3D%28none%29",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_first_add",
+      "value": "fd%3D2024-03-19%2022%3A20%3A56%7C%7C%7Cep%3Dhttps%3A%2F%2Fpractice.sdetunicorns.com%2Fmy-account%2F%7C%7C%7Crf%3D%28none%29",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_current",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_first",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_udata",
+      "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20HeadlessChrome%2F123.0.6312.4%20Safari%2F537.36",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_session",
+      "value": "pgs%3D1%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fpractice.sdetunicorns.com%2Fmy-account%2F",
+      "domain": ".practice.sdetunicorns.com",
+      "path": "/",
+      "expires": 1710888656,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "tk_or",
+      "value": "%22%22",
+      "domain": ".sdetunicorns.com",
+      "path": "/",
+      "expires": 1745446856.495111,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "tk_r3d",
+      "value": "%22%22",
+      "domain": ".sdetunicorns.com",
+      "path": "/",
+      "expires": 1711146056,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "tk_lr",
+      "value": "%22%22",
+      "domain": ".sdetunicorns.com",
+      "path": "/",
+      "expires": 1742422856,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_logged_in_bcee46caf8128c4169fb42a56c1b36e7",
+      "value": "practiceuser1%7C1711059658%7CoQZNuYXnecicTqxG7KtZzuxuOi2GXXzrJa1tG2oiwV5%7C6d82ae01a03368b6e2543b91d9656d1e73739e76fec74f01955879867a52ea1f",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "woocommerce_items_in_cart",
+      "value": "1",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "woocommerce_cart_hash",
+      "value": "ebd98adbf4da9579fb59814cbfd7e50b",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wp_woocommerce_session_bcee46caf8128c4169fb42a56c1b36e7",
+      "value": "175%7C%7C1711059659%7C%7C1711056059%7C%7Ca5dbc7ac579bafe42d37a2ac09c51855",
+      "domain": "practice.sdetunicorns.com",
+      "path": "/",
+      "expires": 1711059659.928055,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

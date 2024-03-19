@@ -9,11 +9,15 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+
+  globalSetup: require.resolve('./utils/global-setup'),
   use: {
-    trace: 'on',
+    trace: 'on-first-retry',
     headless:false,
     // Base URL to use in actions like 'await page.goto('/)'
     baseURL: 'https://practice.sdetunicorns.com/',
+    
+    storageState: 'loggedInState.json'
   },
   expect: {
     // Maximum time expect() should wait for the condition to be match
