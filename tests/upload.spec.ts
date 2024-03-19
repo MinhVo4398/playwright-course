@@ -27,8 +27,6 @@ test.describe("Upload file", () => {
     });
   }
 
-  
-
   test.skip("should upload a test file on a hidden input field", async ({page,}) => { 
     // Open Url
     await page.goto("https://practice.sdetunicorns.com/cart/");
