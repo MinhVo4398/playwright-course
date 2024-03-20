@@ -13,6 +13,8 @@
     "@types/node": "^20.11.24",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.15.0",
     "eslint-plugin-playwright": "^1.5.2",
     "prettier": "3.2.5"
   }
