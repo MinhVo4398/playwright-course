@@ -15,11 +15,10 @@ export default defineConfig({
 
   globalSetup: require.resolve("./utils/global-setup"),
   use: {
-    trace: "on-first-retry",
+    trace: 'retain-on-failure',
     headless: false,
     // Base URL to use in actions like 'await page.goto('/)'
     baseURL: "https://practice.sdetunicorns.com/",
-
     storageState: "loggedInState.json",
   },
   expect: {
