@@ -1,47 +1,50 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   // Maximum time one test can run for
-  timeout: 30  * 1000,
+  timeout: 30 * 1000,
+  // Run tests in files in parallel
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
+  //Retry on CI only
   retries: process.env.CI ? 2 : 0,
+  // Opt out of parallel tests on CI
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: "html",
 
-  globalSetup: require.resolve('./utils/global-setup'),
+  globalSetup: require.resolve("./utils/global-setup"),
   use: {
-    trace: 'on-first-retry',
-    headless:false,
+    trace: "on-first-retry",
+    headless: false,
     // Base URL to use in actions like 'await page.goto('/)'
-    baseURL: 'https://practice.sdetunicorns.com/',
-    
-    storageState: 'loggedInState.json'
+    baseURL: "https://practice.sdetunicorns.com/",
+
+    storageState: "loggedInState.json",
   },
   expect: {
     // Maximum time expect() should wait for the condition to be match
     //Ex: in await expect(locator).toHaveText();
-    timeout: 5000
+    timeout: 5000,
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    /*
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"], headless: false },
     },
 
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"], headless: false },
     },
-    */
+
+    {
+      name: "webkit",
+      use: { ...devices["Desktop Safari"], headless: false },
+    },
+    /*
 
     /* Test against mobile viewports. */
     // {

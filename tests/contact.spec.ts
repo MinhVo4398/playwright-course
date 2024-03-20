@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import ContactPage from "../pages/contact.page";
 import { faker } from '@faker-js/faker';
 
-test.describe("Contact", () => {
+test.describe.only("Contact", () => {
   let contactPage: ContactPage;
   test("Filling contact form and verify success message", async ({ page }) => {
     contactPage = new ContactPage(page);
