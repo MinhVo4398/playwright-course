@@ -17,7 +17,6 @@ class ContactPage {
          this.messageTextArea = page.locator('.contact-message textarea');
          this.submitBtn = page.locator('button[type=submit]');
          this.successTxt =  page.locator("div[role='alert']");
-         
      }
  
      async navigate() {

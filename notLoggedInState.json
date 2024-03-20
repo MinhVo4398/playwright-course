@@ -1,26 +1,6 @@
 {
   "cookies": [
     {
-      "name": "wordpress_sec_bcee46caf8128c4169fb42a56c1b36e7",
-      "value": "practiceuser1%7C1711078492%7CHdMA8HRw12OmtBHFO7y6dm30HmSchsxLKAdGvtZHdfF%7Ce4f60a0ba930b9211a7c25f73581011008a5bea1e955d1c68acc7b08a07c4453",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/wp-content/plugins",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "wordpress_sec_bcee46caf8128c4169fb42a56c1b36e7",
-      "value": "practiceuser1%7C1711078492%7CHdMA8HRw12OmtBHFO7y6dm30HmSchsxLKAdGvtZHdfF%7Ce4f60a0ba930b9211a7c25f73581011008a5bea1e955d1c68acc7b08a07c4453",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/wp-admin",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "wp_wpfileupload_bcee46caf8128c4169fb42a56c1b36e7",
       "value": "Q983kbLDqSAZczsKrHy1GcjW411c17Ob",
       "domain": "practice.sdetunicorns.com",
@@ -128,46 +108,6 @@
       "expires": 1742441690,
       "httpOnly": false,
       "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "wordpress_logged_in_bcee46caf8128c4169fb42a56c1b36e7",
-      "value": "practiceuser1%7C1711078492%7CHdMA8HRw12OmtBHFO7y6dm30HmSchsxLKAdGvtZHdfF%7C3a4f0a667830b33a9e8ebcb3a997e5fb7fe918c2c37435051eb5ba29596811f5",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "woocommerce_items_in_cart",
-      "value": "1",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "woocommerce_cart_hash",
-      "value": "ebd98adbf4da9579fb59814cbfd7e50b",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "wp_woocommerce_session_bcee46caf8128c4169fb42a56c1b36e7",
-      "value": "175%7C%7C1711078494%7C%7C1711074894%7C%7C90cb217b7c50d42a7bc5a9be52cb359a",
-      "domain": "practice.sdetunicorns.com",
-      "path": "/",
-      "expires": 1711078494.491644,
-      "httpOnly": true,
-      "secure": true,
       "sameSite": "Lax"
     }
   ],

@@ -1,17 +1,15 @@
 import { Page } from "@playwright/test";
-import UploadComponent from './component/upload.component';
+import UploadComponent from "./component/upload.component";
 
 class CartPage {
-   private page: Page;
-  
+  private page: Page;
+  constructor(page: Page) {
+    this.page = page;
+  }
 
-    constructor(page: Page) {
-        this.page = page;
-    }
-
-    uploadComponent() {
-        return new UploadComponent(this.page);
-    }
+  uploadComponent() {
+    return new UploadComponent(this.page);
+  }
 }
 
 export default CartPage;
