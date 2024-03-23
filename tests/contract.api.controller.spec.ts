@@ -11,7 +11,7 @@ test.describe("Contact", () => {
     await apiController.init();
     // call GET API
     randomPerson = await apiController.getUsers();
-
+    console.log(randomPerson);
     // call POST API
     const newUserTodo = await apiController.createUserTodo(dataUserTodoJson);
     console.log(newUserTodo);
@@ -30,7 +30,6 @@ test.describe("Contact", () => {
       randomPerson['phone'],
       randomPerson['website']
     );
-
     // Verify success message
 
     await expect(contactPage.successTxt).toHaveText(

@@ -12,7 +12,7 @@ class APIController {
 
   async getUsers() {
     const response = await this.fakerApi.get("users");
-    const responseBody = response.json();
+    const responseBody = await response.json();
     return responseBody[0];
   }
 
